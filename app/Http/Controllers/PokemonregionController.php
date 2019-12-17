@@ -10,7 +10,6 @@ class PokemonregionController extends Controller
         $pokemonRegion = PokemonRegion::all();
         return $pokemonRegion;
     }
-
     public function store(Request $request){
         $pokemonRegion = new PokemonRegion;
 
@@ -18,7 +17,6 @@ class PokemonregionController extends Controller
         $pokemonRegion->regioniD = $request->regioniD;
         $pokemon->save;
     }
-
     public function update(Request $request){
         $pokemonTipo = new Pokemon;
 
@@ -26,7 +24,6 @@ class PokemonregionController extends Controller
         $pokemonTipo->regioniD = $request->regioniD;
         $pokemonTipo->save;
     }
-
     public function destroy(Request $request){
         $pokemonTipo = new PokemonIpo;
 
