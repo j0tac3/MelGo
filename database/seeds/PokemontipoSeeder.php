@@ -13,15 +13,15 @@ class PokemontipoSeeder extends Seeder
     {
         DB::table('pokemontipos')->insert([
             'pokeNumber'   =>  '1',
-            'typeID'   =>  '1',
+            'type_ID'   =>  '1',
         ]);
         DB::table('pokemontipos')->insert([
             'pokeNumber'   =>  '4',
-            'typeID'   =>  '2',
+            'type_ID'   =>  '2',
          ]);
          DB::table('pokemontipos')->insert([
             'pokeNumber'   =>  '7',
-            'typeID'   =>  '3',
+            'type_ID'   =>  '3',
          ]);
     }
 }

@@ -13,18 +13,18 @@ class TipoSeeder extends Seeder
     {
         DB::table('tipos')->insert([
             'typeName'  =>  'Planta',
-            'advID'  =>  '3',
-            'dsvID'  =>  '2',
+            'adv_ID'  =>  '3',
+            'dsv_ID'  =>  '2',
         ]);
         DB::table('tipos')->insert([
             'typeName'  =>  'Fuego',
-            'advID'  =>  '1',
-            'dsvID'  =>  '3',
+            'adv_ID'  =>  '1',
+            'dsv_ID'  =>  '3',
         ]);
         DB::table('tipos')->insert([
             'typeName'  =>  'Agua',
-            'advID'  =>  '2',
-            'dsvID'  =>  '1',
+            'adv_ID'  =>  '2',
+            'dsv_ID'  =>  '1',
         ]);
     }
 }

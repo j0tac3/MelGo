@@ -13,15 +13,15 @@ class PokemonregionSeeder extends Seeder
     {
         DB::table('pokemonregions')->insert([
             'pokeNumber'   =>  '1',
-            'regionID'   =>  '1',
+            'region_ID'   =>  '1',
          ]);
          DB::table('pokemonregions')->insert([
             'pokeNumber'   =>  '4',
-            'regionID'   =>  '1',
+            'region_ID'   =>  '1',
          ]);
          DB::table('pokemonregions')->insert([
             'pokeNumber'   =>  '7',
-            'regionID'   =>  '1',
+            'region_ID'   =>  '1',
          ]);
     }
 }
