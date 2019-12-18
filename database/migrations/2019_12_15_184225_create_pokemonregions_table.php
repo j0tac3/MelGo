@@ -14,18 +14,18 @@ class CreatePokemonregionsTable extends Migration
      */
     public function up()
     {
+        // Definimos los campos de la tabla PokemonRegion
         Schema::create('pokemonregions', function (Blueprint $table) {
             $table->bigIncrements('pokemonRegion_ID');
             $table->bigInteger('region_ID')->unsigned()->index();
             $table->bigInteger('pokeNumber')->unsigned()->index();
-            $table->foreign('region_ID')->references('region_ID')->on('regions')->onDelete('cascade');
-            $table->foreign('pokeNumber')->references('pokeNumber')->on('pokemons')->onDelete('cascade');
             $table->timestamps();
         });
-     /*    Schema::table('pokemontipos', function ($table) {
-            $table->foreign('regionID')->references('regionID')->on('regions')->onDelete('cascade');
+        // Añadimos las restricciones a la tabla PokemonRegion
+        Schema::table('pokemonregions', function ($table) {
+            $table->foreign('region_ID')->references('region_ID')->on('regions')->onDelete('cascade');
             $table->foreign('pokeNumber')->references('pokeNumber')->on('pokemons')->onDelete('cascade');
-        }); */
+        });
     }
 
     /**

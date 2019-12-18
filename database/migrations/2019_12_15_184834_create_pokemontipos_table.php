@@ -13,16 +13,18 @@ class CreatePokemontiposTable extends Migration
      */
     public function up()
     {
+        // Definimos los campos de la tabla Pokemontipos
         Schema::create('pokemontipos', function (Blueprint $table) {
             $table->bigIncrements('pokemonType_ID');
             $table->bigInteger('pokeNumber')->unsigned()->index();
             $table->bigInteger('type_ID')->unsigned()->index();
-            $table->foreign('type_ID')->references('type_ID')->on('tipos')->onDelete('cascade');
+            //$table->foreign('type_ID')->references('type_ID')->on('tipos')->onDelete('cascade');
             $table->timestamps();
         });
-        /* Schema::table('pokemontipos', function ($table) {
+        // Añadimos las restricciones a la tabla PokemonTipos
+        Schema::table('pokemontipos', function ($table) {
             $table->foreign('type_ID')->references('type_ID')->on('tipos')->onDelete('cascade');
-        }); */
+        });
     }
 
     /**

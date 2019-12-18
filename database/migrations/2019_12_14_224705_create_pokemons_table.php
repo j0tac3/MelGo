@@ -29,9 +29,6 @@ class CreatePokemonsTable extends Migration
              $table->boolean('activeGoShiny');
              $table->timestamps();
              // Restricciones de la tabla
-            //$table->primary('pokeNumber');
-             //$table->foreign('preEvolution')->references('pokedex')->on('pokemon');
-             //$table->foreign('evolution')->references('pokedex')->on('pokemon');
              $table->unique('pokeName');
          });
     }

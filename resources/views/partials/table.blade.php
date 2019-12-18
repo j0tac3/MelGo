@@ -3,7 +3,6 @@
     <thead>
         <tr>
             <th scope="col">Pokedex</th>
-            <th scope="col">Pokedex</th>
             <th scope="col">Nombre</th>
             <th scope="col">Descripcion</th>
             <th scope="col">Altura</th>
