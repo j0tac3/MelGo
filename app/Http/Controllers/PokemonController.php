@@ -9,7 +9,7 @@ class PokemonController extends Controller
 {
     public function index(){
         $pokemon = Pokemon::all();
-        return $pokemon;
+        return view('master', ['$pokemons'=> $pokemon]);
     }
 
     public function store(Request $request){
