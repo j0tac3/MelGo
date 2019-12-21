@@ -12,12 +12,13 @@ class CreatePokemonsTable extends Migration
      * @return void
      */
     public function up()
+
     {
         Schema::create('pokemons', function (Blueprint $table) {
              // Definicio de las columnas
-             $table->bigInteger('pokeNumber');
+             $table->bigInteger('pokeNumber',10)->unsigned();
              $table->string('pokeName',50);
-             $table->string('pokeDesc',255);
+             $table->string('pokeDesc',500);
              $table->string('pokeHeight',20);
              $table->string('pokeWeight',20);
              $table->enum('sexo',['chico','chica','sin']);
@@ -28,9 +29,6 @@ class CreatePokemonsTable extends Migration
              $table->boolean('activeGoShiny');
              $table->timestamps();
              // Restricciones de la tabla
-            //$table->primary('pokeNumber');
-             //$table->foreign('preEvolution')->references('pokedex')->on('pokemon');
-             //$table->foreign('evolution')->references('pokedex')->on('pokemon');
              $table->unique('pokeName');
          });
     }

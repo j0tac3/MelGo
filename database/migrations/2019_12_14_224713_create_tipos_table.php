@@ -15,10 +15,11 @@ class CreateTiposTable extends Migration
     {
         Schema::create('tipos', function (Blueprint $table) {
             // Definicion de las columnas
-            $table->bigIncrements('typeID');
+            $table->bigIncrements('type_ID');
             $table->string('typeName',50);
-            $table->integer('advID');
-            $table->integer('dsvID');
+            $table->integer('adv_ID');
+            $table->integer('dsv_ID');
+            //$table->integer('res_ID');
             $table->timestamps();
             // Restricciones de la tabla
             //$table->primary('typeID');
